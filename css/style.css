@@ -1,0 +1,75 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #70e2ff80, 20%, rgb(185, 146, 107, 0.95)),
+      url(../img/happy.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-weight: bolder;
+  }
+  
+  .icon-weather {
+    height: 8rem;
+    line-height: 8rem;
+    align-self: start;
+    margin-left: 4rem;
+    font-size: 1.3rem;
+  }
+  
+  main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container-main {
+    width: 60vw;
+    height: 50vh;
+    background-color: #f0f0f0cc;
+    box-shadow: .5rem .5rem 3rem rgb(63, 62, 62);
+    border-radius: 1rem;
+    padding: 5rem 8rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  button {
+    padding: 2rem 3.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #16cdcd;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }

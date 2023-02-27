@@ -6,7 +6,9 @@ const reciveJoke = async()=>{
             },
           });
           const chiste = await answer.json();
-          console.log(`Accudit: ${chiste.joke}`)
+          console.log(`Accudit: ${chiste.joke}`);
+          document.querySelector("#textJoke").innerHTML=chiste.joke;
+                    
 
     }
     catch(err){
