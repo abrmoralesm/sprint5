@@ -1,7 +1,11 @@
+"use strict";
 let chiste;
 const receive = [];
 
-const showButtons = () => document.querySelectorAll("[buttonScore]").forEach(button => button.style.display = "block");
+const showButtons = () =>
+  document
+    .querySelectorAll("[buttonScore]")
+    .forEach((button) => (button.style.display = "block"));
 
 const receiveJoke = async () => {
   try {
@@ -30,20 +34,23 @@ function score(num) {
   console.table(receive);
 }
 
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
 
-
-
-
-
-const infoWeather = async () => {
-  let infoMeteo;
-  try {
-    const resposta = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=41.3888&lon=2.159&appid=f16094b38276a07cecad67c1e54bf003");
-    const dates = await resposta.json();
-    infoMeteo = dates.weather[0].description;
-  } catch (err) {
-    console.log(err.message);
-  }
-  document.querySelector("#text-weather").innerHTML = infoMeteo;
+    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f16094b38276a07cecad67c1e54bf003
+    `)
+      .then((response) => response.json())
+      .then((data) => {
+        const weather = data.weather;
+        const locate = data.name;
+        const weatherDescription = weather[0].description;
+        const temperature = Math.round(data.main.temp);
+        const celsiusTemperature = (temperature - 273.15).toFixed(0);
+        document.getElementById(
+          "text-weather"
+        ).innerHTML = `Now, at  ${locate}: ${weatherDescription} and ${celsiusTemperature}ºC`;
+      });
+  });
 }
-infoWeather();
