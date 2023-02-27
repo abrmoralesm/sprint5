@@ -13,9 +13,17 @@
         <div class="icon-weather">Avui: parcialment ennuvolat</div>
         <main>
             <div class="container-main">
-                <h1>Preparat per riure?  🤣 </h1>
+                <h1 class="title">Preparat per riure? <span class="button-score">🤣</span>  </h1>
             <p id="textJoke"></p>
-            <button onclick="reciveJoke()">Següent acudit</button>
+            <div class="container-button">
+                <div class="container-buttonScore">
+                  <button buttonScore hidden onclick="score(1)" class="buttonScore">🙁</button>
+                  <button buttonScore hidden onclick="score(2)" class="buttonScore">😐</button>
+                  <button buttonScore hidden onclick="score(3)" class="buttonScore">😆</button>
+                </div>
+                <button class="button-joke" onclick="receiveJoke()">Següent acudit</button>
+              </div>
+           
             </div>
             
         </main>

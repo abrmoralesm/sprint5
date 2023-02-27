@@ -16,7 +16,7 @@ html {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, #70e2ff80, 20%, rgb(185, 146, 107, 0.95)),
+    background: linear-gradient(180deg, #05cdff80, 20%, rgba(226, 226, 226, 0.95)),
       url(../img/happy.jpeg);
     background-size: cover;
     background-position: center;
@@ -53,6 +53,15 @@ html {
     justify-content: space-between;
     align-items: center;
   }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  #textJoke {
+    font-size: 1.6rem;
+  }
+  
   
   h1 {
     font-size: 2.5rem;
@@ -62,13 +71,34 @@ html {
     font-size: 1.5rem;
     font-weight: 600;
   }
+
+  .container-button {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .container-buttonScore {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    margin:10px 0 10px 0;
+  }
   
-  button {
+
+
+  .buttonScore {
+    border: none;
+    background-color: transparent;
+    font-size: 2.8rem;
+  }
+  
+  .button-joke {
     padding: 2rem 3.5rem;
     font-size: 1.3rem;
     font-weight: bold;
     color: #fff;
-    background-color: #16cdcd;
+    background-color: #06b8b8;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
