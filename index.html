@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sprint 5 TypeScript & Api</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
+    <script
+      defer
+      src="https://kit.fontawesome.com/3bd4e64793.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="icon-weather">Avui: parcialment ennuvolat</div>
-        <main>
-            <div class="container-main">
-                <h1 class="title">Preparat per riure? <span class="button-score">🤣</span>  </h1>
-            <p id="textJoke"></p>
-            <div class="container-button">
-                <div class="container-buttonScore">
-                  <button buttonScore hidden onclick="score(1)" class="buttonScore">🙁</button>
-                  <button buttonScore hidden onclick="score(2)" class="buttonScore">😐</button>
-                  <button buttonScore hidden onclick="score(3)" class="buttonScore">😆</button>
-                </div>
-                <button class="button-joke" onclick="receiveJoke()">Següent acudit</button>
-              </div>
-           
+      <div class="weather">
+        Today at Barcelona:
+        <span id="text-weather"></span>
+      </div>
+
+      <main>
+        <div class="container-main">
+          <h1 class="title">
+            Preparat per riure? <span class="button-score">🤣</span>
+          </h1>
+          <p id="textJoke"></p>
+          <div class="container-button">
+            <div class="container-buttonScore">
+              <button buttonScore hidden onclick="score(1)" class="buttonScore">
+                🙁
+              </button>
+              <button buttonScore hidden onclick="score(2)" class="buttonScore">
+                😐
+              </button>
+              <button buttonScore hidden onclick="score(3)" class="buttonScore">
+                😆
+              </button>
             </div>
-            
-        </main>
+            <button class="button-joke" onclick="receiveJoke()">
+              Següent acudit
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="./js/scripts.js"></script>
-</body>
+  </body>
 </html>
