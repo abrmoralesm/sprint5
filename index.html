@@ -5,40 +5,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sprint 5 TypeScript & Api</title>
+   
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./css/style.css" />
-
+    <script src="https://kit.fontawesome.com/0c173e7371.js" crossorigin="anonymous"></script>
+    <title>Sprint 5 TypeScript & Api</title>
 </head>
 
 <body>
     <div class="container">
         <div class="weather">
-
-            <span id="text-weather"></span>
+<img class="img-weather" alt="icon-weather"></img>
+      <div class="text-weather"><span id="text-weather"></span>&nbsp;&#176;C</div>      
         </div>
 
         <main>
+            <div class="blob-high"></div>
+            <div class="blob-small-up"></div>
+            <div class="blob-small-down"></div>
+            
             <div class="container-main">
                 <h1 class="title">
-                    Preparat per riure? <span class="button-score">🤣</span>
+                    Preparat per riure? 
                 </h1>
                 <p id="textJoke"></p>
                 <div class="container-button">
                     <div class="container-buttonScore">
-                        <button buttonScore hidden onclick="score(1)" class="buttonScore">
-                            🙁
+                        <button buttonScore hidden onclick="score(1)" class="buttonScore"><i
+                            class="fa-regular fa-face-frown"></i>
+                            
                         </button>
                         <button buttonScore hidden onclick="score(2)" class="buttonScore">
-                            😐
+                            <i
+                class="fa-regular fa-face-meh"></i>
                         </button>
                         <button buttonScore hidden onclick="score(3)" class="buttonScore">
-                            😆
+                            <i
+                class="fa-regular fa-face-laugh-squint"></i>
                         </button>
                     </div>
-                    <button class="button-joke" onclick="randomJoke()">
-                        Següent acudit
-                    </button>
+                    <div class="container-button-joke">
+                        <button class="button-joke" onclick="randomJoke()">
+                            First joke
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </main>
