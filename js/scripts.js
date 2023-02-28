@@ -4,8 +4,8 @@ const receive = [];
 
 const showButtons = () =>
   document
-    .querySelectorAll("[buttonScore]")
-    .forEach((button) => (button.style.display = "block"));
+  .querySelectorAll("[buttonScore]")
+  .forEach((button) => (button.style.display = "block"));
 
 const receiveJoke = async () => {
   try {
@@ -17,7 +17,7 @@ const receiveJoke = async () => {
     const json = await answer.json();
     chiste = json.joke;
     console.log(`Accudit: ${chiste}`);
-   
+
   } catch (err) {
     console.log(err.message);
   }
@@ -38,12 +38,12 @@ const receiveJoke2 = async () => {
   showButtons();
 };
 
-const randomJoke = ()=>{
+const randomJoke = () => {
   const buttonJoke = document.querySelector(".button-joke");
-  buttonJoke.innerText="Another Joke";
-  const random = parseInt(Math.random()*10);
+  buttonJoke.innerText = "Another Joke";
+  const random = parseInt(Math.random() * 10);
   console.log(`Random: ${random}`);
-  if(random<5) receiveJoke();
+  if (random < 5) receiveJoke();
   else receiveJoke2();
   blobRandom(random);
 }
@@ -62,30 +62,30 @@ const weatherText = document.getElementById("text-weather");
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(
     async function (position) {
-      try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=f16094b38276a07cecad67c1e54bf003`);
-        const data = await response.json();
-        document.querySelector(".img-weather").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-        weatherText.innerHTML = `${(data.main.temp - 273.15).toFixed(0)}`;
-      } catch (err) {
-        console.log(err.message);
+        try {
+          const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=f16094b38276a07cecad67c1e54bf003`);
+          const data = await response.json();
+          document.querySelector(".img-weather").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+          weatherText.innerHTML = `${(data.main.temp - 273.15).toFixed(0)}`;
+        } catch (err) {
+          console.log(err.message);
+        }
+      },
+      function (error) {
+        console.log(error.message);
       }
-    },
-    function (error) {
-      console.log(error.message);
-    }
   );
 }
 
 
 
+const setBlobBackgroundImage = (selector, randomNumber) => {
+  const number = randomNumber % 10;
+  document.querySelector(selector).style.backgroundImage = `url(./img/blob-${number}.svg)`;
+};
 
 const blobRandom = (random) => {
-  document.querySelector(".blob-high").style.backgroundImage = `url(./img/blob-${random}.svg`;
-  let random2 = random + 1;
-  if (random2 == 10) random2 = 0;
-  document.querySelector(".blob-small-up").style.backgroundImage = `url(./img/blob-${random2}.svg`;
-  let random3 = random + 2;
-  if (random3 == 10 || random3 == 11) random3 = 0;
-  document.querySelector(".blob-small-down").style.backgroundImage = `url(./img/blob-${random3}.svg`;}
-  
+  setBlobBackgroundImage(".blob-high", random);
+  setBlobBackgroundImage(".blob-small-up", random + 1);
+  setBlobBackgroundImage(".blob-small-down", random + 2);
+};
