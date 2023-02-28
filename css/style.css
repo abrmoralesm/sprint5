@@ -3,11 +3,14 @@ html {
 }
 
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 
 .container {
   padding: 2rem;
@@ -38,7 +41,7 @@ html {
 
 .text-weather {
   line-height: 4rem;
-  border-left: 0.2rem solid #000;
+  border-left: .2rem solid #000;
   padding-left: 1rem;
 }
 
@@ -74,7 +77,7 @@ main {
 
 .blob-high {
   width: 80rem;
-  height: 110vh;
+  height: 120vh;
   top: 45%;
   left: 50%;
   background-image: url("../img/blob-1.svg");
@@ -83,7 +86,7 @@ main {
 
 .blob-small-up,
 .blob-small-down {
-  width: 23rem;
+  width: 20rem;
   height: 20rem;
 }
 
@@ -98,6 +101,7 @@ main {
   left: 15%;
   background-image: url("../img/blob-3.svg");
 }
+
 
 .title {
   font-size: 2.6rem;
@@ -126,6 +130,8 @@ main {
   margin: 10px 0 10px 0;
 }
 
+
+
 .buttonScore {
   position: relative;
   border: none;
@@ -135,7 +141,7 @@ main {
   border-radius: 5rem;
   font-size: 3.6rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform .2s;
 }
 
 .buttonScore:hover {
@@ -145,6 +151,7 @@ main {
 .buttonScore:active {
   transform: scale(1.7);
   background-color: #ec5858;
+
 }
 
 .container-button-joke {
@@ -169,7 +176,7 @@ i {
   background-color: transparent;
   font-size: 1.3rem;
   font-weight: bold;
-  border: 0.3rem solid #000;
+  border: .3rem solid #000;
   border-radius: 3rem;
   cursor: pointer;
   position: absolute;
@@ -179,10 +186,11 @@ i {
 
 .button-joke:hover {
   background-color: #0a8282;
-  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5),
-    0 0 20px rgba(49, 138, 172, 0.4);
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
   outline-color: rgba(49, 138, 172, 0);
   outline-offset: 80px;
+
+
 }
 
 .button-joke:active {
