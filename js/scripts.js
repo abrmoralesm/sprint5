@@ -65,7 +65,7 @@ if (navigator.geolocation) {
         try {
           const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=f16094b38276a07cecad67c1e54bf003`);
           const data = await response.json();
-          document.querySelector(".img-weather").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+          document.querySelector(".img-weather").src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
           weatherText.innerHTML = `${(data.main.temp - 273.15).toFixed(0)}`;
         } catch (err) {
           console.log(err.message);
